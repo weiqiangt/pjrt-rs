@@ -1,3 +1,5 @@
 /target
-/third_party/bazel-*
 .cargo
+.vscode/
+pjrt_c_api_cpu_plugin.so
+pjrt_c_api_gpu_plugin.so
