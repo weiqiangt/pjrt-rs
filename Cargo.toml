@@ -1,8 +1,5 @@
 [workspace]
-members = [
-    "pjrt-sys",
-    "pjrt"
-]
+members = ["pjrt-sys", "pjrt"]
 
 resolver = "2"
 
@@ -15,14 +12,14 @@ categories = ["science"]
 [workspace.dependencies]
 pjrt-sys = { path = "pjrt-sys", version = "0.2.0" }
 pjrt = { path = "pjrt", version = "0.2.0" }
-bindgen = "0.69"
+bindgen = "0.72"
 bytes = "1"
 libloading = "0.8"
-prost = "0.13"
-prost-build = "0.13"
-prost-types = "0.13"
-thiserror = "1"
+prost = "0.14.1"
+prost-build = "0.14.1"
+prost-types = "0.14.1"
+thiserror = "2.0.12"
 tokio = { version = "1", features = ["macros", "rt", "rt-multi-thread"] }
-bon = "2.3"
+bon = "2.3.0"
 half = "2.4"
 num-complex = "0.4"
