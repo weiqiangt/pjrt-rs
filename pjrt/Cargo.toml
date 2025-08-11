@@ -19,3 +19,6 @@ libloading = { workspace = true }
 bon = { workspace = true }
 half = { workspace = true }
 num-complex = { workspace = true }
+
+[lints.rust]
+unexpected_cfgs = { level = "warn", check-cfg = ['cfg(rust_analyzer)'] }
