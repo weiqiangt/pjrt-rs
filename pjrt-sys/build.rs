@@ -25,7 +25,15 @@ fn main() {
 
     // gen protobuf
     prost_build::Config::new()
+        .protoc_arg("--experimental_allow_proto3_optional")
         .include_file("protos.rs")
-        .compile_protos(&[protos.join("xla/pjrt/compile_options.proto")], &[protos])
+        .compile_protos(
+            &[
+                protos.join("xla/pjrt/compile_options.proto"),
+                protos.join("xla/pjrt/distributed/protocol.proto"),
+                protos.join("xla/xla_data.proto"),
+            ],
+            &[protos],
+        )
         .expect("unable to compile protos");
 }
